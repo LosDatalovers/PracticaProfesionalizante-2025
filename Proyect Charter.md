@@ -29,7 +29,7 @@ El objetivo principal de este proyecto es desarrollar un modelo de predicción d
 
 | Etapa | Duración Estimada | Fechas |
 |------|---------|-------|
-| Definicion del problema | 2 semanas | desde 14/04hasta:27/04 |
+| Definicion del problema | 2 semanas | desde 06/04hasta:28/04 |
 | Análisis Exploratorio (EDA) y Fairlearn | 2 semanas | desde 28/04 hasta 11/05 |
 | Preparacion de los Datoss | 2 semanas | desde 12/05 hasta 25/05 |
 | Modelado Inicial y Experimentación con MLflow | 2 semanas |desde 26/05 hasta 08/06 |
