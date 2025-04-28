@@ -1,4 +1,4 @@
-# Trabajo de Final de Cursada 2025
+# Práctica Profesionalizante II - DataLovers
 
 Integrantes:
 
@@ -7,10 +7,11 @@ Almada, Sergio Daniel
 Beltramone, Mateo
 Guzmán, Nahir Dayana
 Navarro, Paola Giselle
-Gerardo Agustín Galeano
-Giuliana Sofia Gesto
+Galeano, Gerardo Agustín
+Gesto, Giuliana Sofía
 ```
-Informacion De los Archivos
+
+Informacion del dataset utilizado
 
 ```
 train.csv - El conjunto de entrenamiento
