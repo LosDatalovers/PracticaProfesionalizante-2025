@@ -1,84 +1,27 @@
-# Reporte del Modelo Final
+# Elección del Mejor Modelo de Regresión - Predicción de Precios de Casas
 
-## Resumen Ejecutivo
-
-El modelo final seleccionado para resolver el problema fue un **Gradient Boosting Regressor**, el cual superó significativamente al modelo *baseline* y al resto de los modelos evaluados.
-
-Obtuvo los siguientes resultados en las métricas de evaluación:
-
-- **RMSE**: 17,090.93  
-- **MAE**: 30,153.60  
-- **R²**: 0.8405  
-
-Estos resultados indican un alto poder predictivo y una capacidad sólida para capturar la varianza de la variable objetivo. El modelo se considera altamente efectivo para el problema planteado.
+En este análisis, se evaluaron múltiples modelos de regresión para predecir **precios de casas**. Los modelos fueron comparados utilizando métricas estándar como el **Error Absoluto Medio (MAE)**, el **Error Cuadrático Medio (MSE)**, y el **Coeficiente de Determinación (R²)**.
 
 ---
 
-## Descripción del Problema
+## Resumen de Resultados
 
-El problema abordado consistió en construir un modelo de regresión para predecir una variable continua a partir de un conjunto de características numéricas. Este tipo de problema es común en contextos donde se requiere estimar valores numéricos, como ingresos, precios, ventas, puntuaciones, etc.
-
-### Objetivos:
-
-- Construir un modelo predictivo preciso.  
-- Comparar distintos algoritmos de regresión.  
-- Seleccionar el modelo con mejor desempeño.  
-
-### Justificación:
-
-Un modelo de regresión eficaz permite automatizar y mejorar procesos de toma de decisiones basados en estimaciones numéricas, lo que puede generar ventajas competitivas y operativas.
+| Modelo                    | Error Absoluto (MAE) | Error Cuadrático Medio (MSE) | Coef. de Determinación (R²) |
+|--------------------------|----------------------|-------------------------------|-----------------------------|
+| Gradient Boosting Regressor | 17,090.93             | 981,932,534.0                 | 0.8405                      |
+| LightGBM                 | 17,548.04             | 988,540,355.0                 | 0.8382                      |
+| Random Forest            | 18,450.86             | 1,055,867,698.0               | 0.8256                      |
+| Lasso LARS               | 17,724.42             | 1,166,011,936.0               | 0.8121                      |
+| Dummy Regressor          | 56,741.89             | 77,259,588.0                  | 0.0002                      |
 
 ---
 
-## Descripción del Modelo
+## Modelo Seleccionado: **Gradient Boosting Regressor**
 
-El modelo final es un **Gradient Boosting Regressor**, un algoritmo de *ensamble* basado en árboles de decisión que construye modelos de manera secuencial, cada uno corrigiendo los errores del anterior. Utiliza una combinación de técnicas de aprendizaje supervisado y optimización de gradientes para mejorar el rendimiento iterativamente.
-
-### Metodología:
-
-- División de los datos en conjuntos de entrenamiento y prueba.  
-- Preprocesamiento y normalización según corresponda.  
-- Evaluación mediante validación cruzada.  
-- Comparación con múltiples modelos: regresión lineal, regresores de árbol, regresores de ensamble, etc.  
-- Selección basada en métricas de desempeño.  
+Este modelo fue seleccionado por obtener el **mejor desempeño general** en las métricas evaluadas. Logró el **mayor coeficiente de determinación** (**R² = 0.8405**), indicando que explica el **84% de la variación** en los datos, y presentó los **menores errores absolutos y cuadrados**, lo que demuestra su **precisión y robustez**.
 
 ---
 
-## Evaluación del Modelo
+## Conclusión
 
-Las métricas utilizadas para evaluar el modelo fueron:
-
-- **RMSE (Root Mean Squared Error)**: 17,090.93  
-- **MAE (Mean Absolute Error)**: 30,153.60  
-- **R² (Coeficiente de Determinación)**: 0.8405  
-
-### Interpretación:
-
-- Un **RMSE** bajo indica que el modelo comete pocos errores grandes.  
-- Un **MAE** moderado refleja un buen promedio de error absoluto.  
-- Un **R²** de 0.84 significa que el modelo explica aproximadamente el 84% de la varianza total de la variable objetivo, lo cual es excelente en la mayoría de los contextos prácticos.  
-
-Comparado con el modelo *baseline* (**Dummy Regressor**, R² ≈ 0.36), este modelo representa una mejora sustancial y justificada.
-
----
-
-## Conclusiones
-
-- El modelo **Gradient Boosting** obtuvo el mejor rendimiento entre todos los evaluados.  
-- Demuestra una alta capacidad para generalizar y predecir con precisión.  
-- Es significativamente superior al *baseline*, lo que valida su uso práctico.
-
----
-
-## Recomendaciones
-
-- Utilizar este modelo en producción bajo condiciones similares a las de los datos de entrenamiento.  
-- Monitorear el desempeño del modelo periódicamente para detectar posibles caídas por cambios en los datos (*concept drift*).  
-- Explorar técnicas de ajuste de hiperparámetros o *pipelines* automatizados (AutoML) para mejoras adicionales.
-
----
-
-## Referencias
-
-- Friedman, J. H. (2001). *Greedy Function Approximation: A Gradient Boosting Machine*.  
-- Scikit-learn documentation: [https://scikit-learn.org](https://scikit-learn.org)
+El modelo **Gradient Boosting Regressor** se considera el más adecuado para este problema, y se recomienda su uso en el despliegue o para análisis adicionales.
